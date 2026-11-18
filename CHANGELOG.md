@@ -2,6 +2,7 @@
 
 ## Unreleased — 0.1.0 community snapshot
 
+- User authorized publishing the community snapshot to public `th0t3p/scrinium-community`. Verified the acting SSH identity, community extraction hashes, commit authors and tracked-file credential/artifact scan; no private repository history is included. Public push verification will be recorded after upload.
 - Clarified the English and Chinese README: the download is source, not a desktop installer; documented first setup, later startup and Docker stop commands. Moved optional developer tests out of the end-user startup path. Documentation checked against package scripts and Compose; application code and license are unchanged.
 - Extracted an isolated browser-only Scrinium community edition with basic Markdown editing, encrypted local persistence, local search, folders, outline, recoverable trash, import, backup, recovery and password changes. Separate IndexedDB storage never opens the production app's database.
 - Removed online accounts, cloud services, payment and Pro features. Optional nonroot Docker/Nginx serves static files only; notes remain in each browser's database. No runtime credentials or environment variables are required.
