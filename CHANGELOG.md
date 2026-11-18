@@ -1,6 +1,9 @@
 # Change Log
 
-## Unreleased — 0.1.0 community snapshot
+## Unreleased — 0.1.0 snapshot
+
+- Renamed the public repository from `th0t3p/scrinium-community` to `th0t3p/scrinium-note` at the user's request. The display name is now Scrinium Note in the application, browser title, READMEs, notices, package metadata, Docker image and repository description. Updated clone URLs and the SSH remote. PolyForm Noncommercial is unchanged.
+- Kept persisted database/backup identifiers and preference keys stable. Existing pre-rename browser data unlocked and rendered after replacing the local static-host container. Crypto/search and all 14 vault behavior checks, TypeScript, production build, boundary check, Compose validation and Docker build passed. Desktop and 375px branding were checked; no page overflow or captured browser warnings/errors. Captures from before the rename remain historical rather than being relabeled as new UI verification.
 
 - Published the community source to public `th0t3p/scrinium-community`, branch `main`, under the user's explicit authorization. Verified the acting browser/SSH identity, community extraction hashes, commit authors and tracked-file credential/artifact scan; no private repository history is included. Added the Scrinium website and relevant repository topics. GitHub visibly confirmed the public repository, README and license link; the SSH push completed successfully.
 - Added download/clone instructions to both READMEs and updated publication records. This batch changes documentation only; earlier app/build/Docker checks still apply. No hosted service, container registry image or GitHub Release was published.

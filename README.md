@@ -1,17 +1,17 @@
-# Scrinium Community
+# Scrinium Note
 
 [中文说明](README.zh-CN.md) · [Full Scrinium](https://scrinium-note.com/)
 
 Local encrypted Markdown notes in your browser. A feature-frozen, source-available
-community snapshot for noncommercial use, extracted from Scrinium.
+snapshot for noncommercial use, extracted from Scrinium.
 
 ## Get the source
 
 Download and extract the ZIP from this repository's **Code** menu, or clone it:
 
 ```sh
-git clone https://github.com/th0t3p/scrinium-community.git
-cd scrinium-community
+git clone https://github.com/th0t3p/scrinium-note.git
+cd scrinium-note
 ```
 
 ## Where it runs
@@ -78,16 +78,16 @@ images; it is a boundary, not a security-audit claim.
 - Basic Milkdown Markdown editing, lists, tables, code highlighting, clipboard and undo/redo.
 - Encrypted vault creation/unlock, recovery keys, password changes and key regeneration.
 - Encrypted browser persistence, local search, notes, folders, outline and recoverable trash.
-- Markdown/text/plain-JSON import, explicit plaintext-JSON export, encrypted community backup and recovery.
+- Markdown/text/plain-JSON import, explicit plaintext-JSON export, encrypted encrypted backup and recovery.
 - Dark/light themes and left/center/wide reading layouts.
-- Password-plus-typed-confirmation deletion of this community vault only.
+- Password-plus-typed-confirmation deletion of this local vault only.
 
-Encrypted backups restore only into an empty community vault, after verifying
+Encrypted backups restore only into an empty local vault, after verifying
 the password/recovery key and every encrypted note. They never silently replace
 an existing vault. Other Scrinium editions' encrypted backups are not accepted;
 export plain notes there and import those instead. Plain exports are unencrypted.
 
-The community build excludes accounts, authentication servers, cloud sync,
+The build excludes accounts, authentication servers, cloud sync,
 subscriptions, payment, encrypted attachments, stored version history, graph
 view, formula/diagram plugins, burner-note sharing, legacy/dead-man features and
 the production app's Pro templates. It is not a drop-in replacement for every
@@ -102,7 +102,7 @@ This is source-available software with a noncommercial restriction, not
 OSI-approved open source. The full license, including its organization clauses,
 controls permitted use; the restriction does not relicense the separate libraries.
 
-Version 0.1.0 is a community snapshot, not a promise of feature parity or ongoing
+Version 0.1.0 is a source snapshot, not a promise of feature parity or ongoing
 support. There is no automatic synchronization with private Scrinium. Review
 security or compatibility fixes separately before choosing to release a new tag.
 [UPSTREAM.json](UPSTREAM.json) records the source commit and allowlisted files.

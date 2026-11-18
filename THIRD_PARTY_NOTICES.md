@@ -1,6 +1,6 @@
 # Third-party notices
 
-These separate libraries retain their own licenses. The community application's
+These separate libraries retain their own licenses. The application's
 noncommercial terms do not replace the grants below. Versions come from the
 installed production dependency tree. License texts are included where the
 package distributes them; missing texts must be resolved before public release.

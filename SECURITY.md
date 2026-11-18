@@ -11,7 +11,7 @@ Tests verify behavior; this edition has not received an independent security aud
 - Docker serves app files only. There is no API, user directory, session service, email recovery or server database. Stopping a container does not delete browser notes, and backing up a container does not back up browser notes.
 - A browser profile and origin (scheme, hostname, port) define the storage boundary. Clearing that browser data loses this vault unless an external backup exists. Recovery keys recover access to a vault/backup, not data that no longer exists.
 - Ordinary password changes do not revoke an existing recovery key; the separate regeneration action does. Recovery unlock requires setting a new password before returning to the editor.
-- Encrypted community backups restore only into an empty database after decryption validation. Plain JSON exports deliberately contain plaintext. Notes moved to trash remain recoverable ciphertext; deleting the vault is irreversible and requires its password plus typed confirmation.
+- Encrypted encrypted backups restore only into an empty database after decryption validation. Plain JSON exports deliberately contain plaintext. Notes moved to trash remain recoverable ciphertext; deleting the vault is irreversible and requires its password plus typed confirmation.
 - Basic metadata and declared cipher parameters are checked, but no claim of audited resistance to every malicious import is made. The backup picker limits input size to 50 MB.
 
 No real credentials, private vaults or production accounts are needed for tests.

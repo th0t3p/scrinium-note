@@ -1,8 +1,8 @@
-# Scrinium Community
+# Scrinium Note
 
 [English](README.md) · [Scrinium 官网](https://scrinium-note.com/)
 
-在浏览器里使用的本地加密 Markdown 笔记。这是一份功能固定的社区版快照，
+在浏览器里使用的本地加密 Markdown 笔记。这是一份功能固定的源码快照，
 代码采用非商用许可。
 
 ## 下载源码
@@ -10,8 +10,8 @@
 可以在仓库的 **Code** 菜单里下载 ZIP 并解压，也可以执行：
 
 ```sh
-git clone https://github.com/th0t3p/scrinium-community.git
-cd scrinium-community
+git clone https://github.com/th0t3p/scrinium-note.git
+cd scrinium-note
 ```
 
 ## 软件运行在哪里
@@ -64,19 +64,19 @@ docker compose up --build -d
 - 浏览器内加密保存、本机搜索、笔记、文件夹、目录跳转及可恢复的回收站。
 - 导入 Markdown、文本和明文 JSON，导出明文 JSON 或加密备份。
 - 明暗主题及左对齐、居中、宽版阅读布局。
-- 输入密码并明确确认后，删除当前浏览器中的这一个社区版笔记库。
+- 输入密码并明确确认后，删除当前浏览器中的这一个笔记库。
 
-加密备份只恢复到空的社区版笔记库，验证密码或恢复密钥及每条笔记后才写入，
+加密备份只恢复到空的 Scrinium Note 笔记库，验证密码或恢复密钥及每条笔记后才写入，
 不会直接覆盖现有笔记库。其他 Scrinium 版本的加密备份不兼容；迁移时先在原版
-导出明文笔记，再导入社区版。明文导出文件不加密。
+导出明文笔记，再导入 Scrinium Note。明文导出文件不加密。
 
-社区版移除了账号、登录服务器、云同步、订阅支付，以及加密附件、历史版本、
+此版本移除了账号、登录服务器、云同步、订阅支付，以及加密附件、历史版本、
 关系图谱、公式与图解、阅后即焚、失联托管和原版 Pro 模板等功能。
 
 ## 许可和后续更新
 
 自有代码采用 [PolyForm Noncommercial 1.0.0](LICENSE.md)。非商用许可有用途限制，
-因此这里使用“源码公开社区版”的说法，不称为符合 OSI 定义的开源。
+因此这里使用“源码公开版本”的说法，不称为符合 OSI 定义的开源。
 允许哪些用途，以完整条款为准；其中也有非营利组织等条款。第三方依赖仍按
 各自原有的许可提供，不会被改成非商用许可。
 

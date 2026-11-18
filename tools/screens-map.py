@@ -23,7 +23,7 @@ svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height
        '<rect width="100%" height="100%" fill="#f8fafc"/>',
        '<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7" fill="none" stroke="#64748b"/></marker></defs>',
        '<g font-family="system-ui,sans-serif" fill="#18202d">',
-       '<text x="20" y="28" font-size="19">Scrinium Community — / — UI states and captures</text>',
+       '<text x="20" y="28" font-size="19">Scrinium Note — / — UI states and captures</text>',
        '<text x="20" y="49" font-size="12">Green: captured. Amber: no browser capture. Recovery-key image stays private. Arrows show selected UI paths.</text>']
 
 for row, flow in enumerate(rows):

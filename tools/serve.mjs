@@ -22,4 +22,4 @@ const server = createServer(async (request, response) => {
     response.writeHead(200).end(request.method === 'HEAD' ? undefined : data);
   } catch { response.writeHead(404).end(); }
 });
-server.listen(port, '127.0.0.1', () => console.log(`Community preview: http://127.0.0.1:${port}/`));
+server.listen(port, '127.0.0.1', () => console.log(`Scrinium Note preview: http://127.0.0.1:${port}/`));

@@ -109,7 +109,7 @@ export default function App() {
             <button className="sc-btn sc-btn-ghost" onClick={() => setSettings(true)}><Settings2 />Settings</button>
             <div className="sidebar-tools"><button className="sc-btn" disabled={busy} onClick={() => void run(() => vault.lock())}><LockKeyhole />Lock</button>
               <button className="sc-icon-btn" aria-label={theme === 'dark' ? 'Use light theme' : 'Use dark theme'} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{theme === 'dark' ? <Sun /> : <Moon />}</button></div>
-            <p className="local-label">Local vault · Community 0.1</p>
+            <p className="local-label">Local vault · 0.1</p>
             <a className="product-site" href="https://scrinium-note.com/" target="_blank" rel="noreferrer">Scrinium website</a>
           </div>
         </aside>
@@ -129,8 +129,8 @@ export default function App() {
     {state.recoveryKey && <RecoveryKey value={state.recoveryKey} />}
     {settings && <Dialog title="Settings" close={() => { setSettings(false); setNotice(''); }}>
       <h3>Data</h3><p className="muted">Notes are stored in this browser. Keep an encrypted backup before clearing browser data or changing the website address.</p>
-      <div className="settings-actions"><button className="sc-btn" disabled={busy} onClick={() => void run(async () => download(await vault.exportEncrypted(), 'scrinium-community-encrypted.json'))}>Export encrypted backup</button>
-        <button className="sc-btn" disabled={busy} onClick={() => void run(async () => download(await vault.exportPlaintext(), 'scrinium-community-plaintext.json'))}>Export plain JSON</button>
+      <div className="settings-actions"><button className="sc-btn" disabled={busy} onClick={() => void run(async () => download(await vault.exportEncrypted(), 'scrinium-note-encrypted.json'))}>Export encrypted backup</button>
+        <button className="sc-btn" disabled={busy} onClick={() => void run(async () => download(await vault.exportPlaintext(), 'scrinium-note-plaintext.json'))}>Export plain JSON</button>
         <button className="sc-btn" disabled={busy} onClick={() => fileInput.current?.click()}>Import Markdown, text or JSON</button>
         <input ref={fileInput} type="file" hidden multiple accept=".md,.markdown,.txt,.json" onChange={event => { const files = Array.from(event.target.files ?? []); event.target.value = ''; if (files.length) void run(async () => { const count = await vault.importPlaintext(await parsePlaintextFiles(files)); setNotice(`Imported ${count} note${count === 1 ? '' : 's'}.`); }); }} /></div>
       <PasswordChange busy={busy} run={run} />
@@ -146,14 +146,14 @@ export default function App() {
 
 function DeleteVault({ close }: { close: () => void }) {
   const [password,setPassword] = useState(''); const [confirmation,setConfirmation] = useState(''); const [error,setError] = useState(''); const [busy,setBusy] = useState(false);
-  return <Dialog title="Delete local vault" close={close}><p>This permanently deletes all notes and keys from this community vault in this browser. Export an encrypted backup in Settings first if you want to keep them.</p><form onSubmit={event => { event.preventDefault(); setBusy(true); setError(''); void vault.destroy(password, confirmation).then(close).catch(failure => setError(message(failure))).finally(() => setBusy(false)); }}>
+  return <Dialog title="Delete local vault" close={close}><p>This permanently deletes all notes and keys from this local vault in this browser. Export an encrypted backup in Settings first if you want to keep them.</p><form onSubmit={event => { event.preventDefault(); setBusy(true); setError(''); void vault.destroy(password, confirmation).then(close).catch(failure => setError(message(failure))).finally(() => setBusy(false)); }}>
     <label>Vault password<input className="sc-input" aria-label="Vault password" type="password" autoComplete="current-password" value={password} onChange={event => setPassword(event.target.value)} required /></label>
     <label>Type DELETE to confirm<input className="sc-input" aria-label="Type DELETE to confirm" value={confirmation} onChange={event => setConfirmation(event.target.value)} autoComplete="off" required /></label>
     {error && <p role="alert">{error}</p>}<button className="sc-btn sc-btn-danger" disabled={busy || confirmation !== 'DELETE'}>Delete vault permanently</button>
   </form></Dialog>;
 }
 
-function Brand() { return <div className="brand"><img src="/icon.png" alt="" width="30" height="30" /><span>Scrinium<small>Community</small></span></div>; }
+function Brand() { return <div className="brand"><img src="/icon.png" alt="" width="30" height="30" /><span>Scrinium Note</span></div>; }
 
 function VaultGate({ hasVault }: { hasVault: boolean }) {
   const [password, setPassword] = useState(''); const [confirm, setConfirm] = useState('');
@@ -163,7 +163,7 @@ function VaultGate({ hasVault }: { hasVault: boolean }) {
     event.preventDefault(); setError(''); setBusy(true);
     try {
       if (restore) {
-        if (!file) throw new Error('Choose an encrypted community backup.');
+        if (!file) throw new Error('Choose an encrypted Scrinium Note backup.');
         if (file.size > 50 * 1024 * 1024) throw new Error('This backup exceeds the 50 MB import limit.');
         await vault.restoreEmpty(JSON.parse(await file.text()), password, recovery);
       } else if (hasVault) await vault.unlock(password, recovery);

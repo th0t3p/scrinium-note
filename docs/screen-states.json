@@ -1,10 +1,10 @@
 {
   "route": "/",
   "sourceHashes": {
-    "src/App.tsx": "1161619601201082d81f8e7b9e84499fdf30da67a83aac817ac1ba21c56e6bf0",
+    "src/App.tsx": "f2fdc369a3b060cfabf664b439e13987643dc2722ffaae45aca5bc6604dbaf7a",
     "src/NoteEditor.tsx": "1595418824e727bc16ebcf5462c66935532113f347afd7b489074d7756929084",
     "src/main.tsx": "9dfdbacf04d2e3a1de53b087a752adc8e5a605a55a9fd3f2977e5d85843eb29a",
-    "src/lib/vault.ts": "2942d085c8eaacddccb937c8f4dc57d57c6de8baa9c09f3a2573d404d51330ef"
+    "src/lib/vault.ts": "f2e1f73a1c6b1e0bd8288d18130041ed8e093254d693e4cc4fcda55741ab5ebb"
   },
   "flows": [
     {

@@ -11,7 +11,7 @@ COPY tests ./tests
 RUN npm test && npm run build
 
 FROM nginxinc/nginx-unprivileged:alpine@sha256:b5047b9b76845eac124358373c6852377c52e4b05834a47647e955dd91cb8f1e
-LABEL org.opencontainers.image.title="Scrinium Community" org.opencontainers.image.version="0.1.0" org.opencontainers.image.licenses="PolyForm-Noncommercial-1.0.0"
+LABEL org.opencontainers.image.title="Scrinium Note" org.opencontainers.image.version="0.1.0" org.opencontainers.image.licenses="PolyForm-Noncommercial-1.0.0"
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 8080

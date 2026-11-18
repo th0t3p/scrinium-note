@@ -1,17 +1,39 @@
 # Validation
 
-Community source snapshot: [th0t3p/scrinium-community](https://github.com/th0t3p/scrinium-community).
+Scrinium Note source snapshot: [th0t3p/scrinium-note](https://github.com/th0t3p/scrinium-note).
 Not deployed as a public service and not an independently audited security product.
+
+## Scrinium Note rename — 2026-11-18
+
+The user chose Scrinium Note without a Community suffix. GitHub accepted the
+repository rename to `th0t3p/scrinium-note`; the About description, clone links,
+SSH remote, UI brand/title, download filenames, package name and Docker image
+were updated. The PolyForm license text was not changed.
+
+Legacy storage, preference and encrypted-backup identifiers remain unchanged.
+The existing `localhost:8088` profile unlocked its pre-rename vault and rendered
+the same note under the new brand. The sidebar also fit a 375 × 812 viewport,
+whose document width remained 375 px. No browser warnings/errors were captured.
+Crypto/search suites and all 14 vault checks, TypeScript, production build,
+boundary scan, Compose validation and the Docker build passed after renaming.
+The renamed local image ran as UID 101 with capabilities dropped and
+no-new-privileges. Its image ID is:
+
+`sha256:df4f8884323283f6704430d241e75c54040fc77862004a76d876d8c50028d690`
+
+New rename screenshots use a separate artifact directory. The generated coverage
+map marks states without new screenshots as pending; earlier captures and checks
+below describe the original extraction and are retained as historical evidence.
 
 ## Public source publication — 2026-11-18
 
 The owner explicitly authorized a new public repository. Both the browser owner
-and the SSH authentication greeting identified `th0t3p`. The isolated community
+and the SSH authentication greeting identified `th0t3p`. The isolated source
 history was pushed over `github.com-th0t3p` to the repository's `main` branch;
 GitHub showed Public, the expected source files, README and PolyForm license link.
 All commit authors use the active identity. The tracked-file credential/artifact
 scan and all 12 extracted-file hashes passed before upload. The repository's
-About website points to Scrinium and its topics describe the actual community
+About website points to Scrinium and its topics describe the actual public
 features. No production history, real vaults, Pro modules or runtime credentials
 were uploaded. No container registry image, hosted application or GitHub Release
 was published by this source upload.
@@ -52,7 +74,7 @@ artifacts, not repository assets.
 
 ## Docker build and runtime
 
-`docker build -t scrinium-community:0.1.0 .` passed, including tests and build.
+`docker build -t scrinium-note:0.1.0 .` passed, including tests and build.
 Both base images are pinned to digests in Dockerfile. The local preview was run
 with all Linux capabilities dropped and `no-new-privileges`, bound only to
 `127.0.0.1:8088`. Its image is:

@@ -10,6 +10,7 @@ import { rebuildSearchIndex, clearSearchIndex } from './search';
 import type { PlaintextEntry } from './transfer';
 import type { LocalNote, NoteMeta, NoteRow, UnlockedKeys, VaultRecord } from './types';
 
+// Persisted identifiers predate the Scrinium Note rename; keep existing vaults and backups compatible.
 export const DATABASE_NAME = 'scrinium-community-v1';
 export const BACKUP_FORMAT = 'scrinium-community-v1';
 export class CommunityDB extends Dexie {
@@ -33,10 +34,10 @@ export function assertPassword(password: string): void {
 }
 
 function validatedBackup(value: unknown): Backup {
-  if (!value || typeof value !== 'object') throw new Error('Invalid community backup.');
+  if (!value || typeof value !== 'object') throw new Error('Invalid encrypted backup.');
   const b = value as Backup;
   if (b.format !== BACKUP_FORMAT || b.version !== 1 || !b.vault || !Array.isArray(b.notes)) {
-    throw new Error('Use an encrypted Scrinium Community backup. Import text or JSON notes from other editions.');
+    throw new Error('Use an encrypted Scrinium Note backup. Import text or JSON notes from other editions.');
   }
   const v = b.vault;
   if (v.kdfOps !== 3 || v.kdfMem !== 67_108_864) throw new Error('Unsupported backup encryption parameters.');
@@ -224,7 +225,7 @@ export class CommunityVault {
     });
   }
   async restoreEmpty(value: unknown, credential: string, recovery = false): Promise<void> {
-    if (await this.db.vault.get('default')) throw new Error('Restore into an empty community vault. Your current vault will not be overwritten.');
+    if (await this.db.vault.get('default')) throw new Error('Restore into an empty local vault. Your current vault will not be overwritten.');
     const backup = validatedBackup(value);
     const keys = recovery ? await unlockWithRecovery(backup.vault, credential) : await unlockVault(backup.vault, credential);
     const notes = await this.readNotes(keys, backup.notes);

@@ -12,7 +12,7 @@ When considering an update:
 
 1. Run `npm run upstream:check -- /absolute/path/to/private/scrinium`.
 2. Review changed allowlisted files manually, including new imports and schema/backup changes. A changed source file is not automatic authorization to copy it.
-3. Bring over only the relevant fix. Recheck removal of accounts, API calls and Pro features; keep the community database and backup format isolated.
+3. Bring over only the relevant fix. Recheck removal of accounts, API calls and Pro features; keep the local database and backup format isolated.
 4. Run typecheck, unit/repository tests, boundary checks, dependency audit, notices, build, browser workflow and Docker checks.
 5. Update source/derived hashes, CHANGELOG, validation and package version. Publish a new tag only if requested; preserve existing downloadable snapshots.
 
