@@ -1,6 +1,6 @@
 # Scrinium Note
 
-[![Scrinium Note：加密 Markdown 笔记。](docs/assets/scrinium-note-banner.png)](https://scrinium-note.com/)
+[![Scrinium Note：加密 Markdown 笔记。](docs/assets/scrinium-note-banner-v2.png)](https://scrinium-note.com/)
 
 [English](README.md) · [在线托管版](https://scrinium-note.com/)
 

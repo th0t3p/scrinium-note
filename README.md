@@ -1,6 +1,6 @@
 # Scrinium Note
 
-[![Scrinium Note — Encrypted Markdown notes.](docs/assets/scrinium-note-banner.png)](https://scrinium-note.com/)
+[![Scrinium Note — Encrypted Markdown notes.](docs/assets/scrinium-note-banner-v2.png)](https://scrinium-note.com/)
 
 [中文说明](README.zh-CN.md) · [Hosted version](https://scrinium-note.com/)
 

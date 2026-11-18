@@ -1,7 +1,7 @@
 # README banner
 
 - Latest edit: removed the bottom website line using the built-in `image_gen` tool, preserving the logo, title, subtitle and canvas. The banner's Markdown link still opens the product website; no hosted-app copy was removed from the surrounding README.
-- Asset: `scrinium-note-banner.png`, linked from both project READMEs to `https://scrinium-note.com/`.
+- Asset: `scrinium-note-banner-v2.png`, linked from both project READMEs to `https://scrinium-note.com/`.
 - Created on 2026-11-18 with the built-in `image_gen` tool. The tool did not expose a model identifier. No fallback CLI or external image API was used.
 - Reference: the project's existing `public/icon.png` brand mark. The generated banner was inspected for brand consistency, exact wording, clipping and legibility before use. Only proportional downscaling and PNG compression were applied afterward.
 - Current visible copy: “Scrinium Note” and “Encrypted Markdown notes”. The website line was removed at the user’s request. The image is a brand banner, not a screenshot or a claim that hosted functions are included in the local application.
