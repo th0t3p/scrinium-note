@@ -1,7 +1,20 @@
 # Validation
 
-Local candidate only. Not published to GitHub, not deployed as a public service,
-and not an independently audited security product.
+Community source snapshot: [th0t3p/scrinium-community](https://github.com/th0t3p/scrinium-community).
+Not deployed as a public service and not an independently audited security product.
+
+## Public source publication — 2026-11-18
+
+The owner explicitly authorized a new public repository. Both the browser owner
+and the SSH authentication greeting identified `th0t3p`. The isolated community
+history was pushed over `github.com-th0t3p` to the repository's `main` branch;
+GitHub showed Public, the expected source files, README and PolyForm license link.
+All commit authors use the active identity. The tracked-file credential/artifact
+scan and all 12 extracted-file hashes passed before upload. The repository's
+About website points to Scrinium and its topics describe the actual community
+features. No production history, real vaults, Pro modules or runtime credentials
+were uploaded. No container registry image, hosted application or GitHub Release
+was published by this source upload.
 
 Baseline: existing Scrinium dark/purple theme tokens, basic Milkdown editing and
 libsodium vault/note encryption. Database: `scrinium-community-v1`; no original

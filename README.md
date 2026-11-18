@@ -5,6 +5,15 @@
 Local encrypted Markdown notes in your browser. A feature-frozen, source-available
 community snapshot for noncommercial use, extracted from Scrinium.
 
+## Get the source
+
+Download and extract the ZIP from this repository's **Code** menu, or clone it:
+
+```sh
+git clone https://github.com/th0t3p/scrinium-community.git
+cd scrinium-community
+```
+
 ## Where it runs
 
 The editor, encryption, decryption, keys, search and note database run in your
@@ -29,8 +38,7 @@ not a supported deployment.
 
 This repository contains source code, not a desktop installer. Downloading the
 ZIP alone does not start the app. Choose either the Node commands below or the
-Docker command in the next section. The local preview running on the author's
-machine has already completed these setup steps.
+Docker command in the next section.
 
 Use Node 20.19+ or 22.12+. From the repository directory:
 
