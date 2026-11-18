@@ -1,0 +1,92 @@
+{
+  "sourceCommit": "20d6578ea106683bd76ce67309e19e44f7d8391b",
+  "product": "https://scrinium-note.com/",
+  "snapshotVersion": "0.1.0",
+  "policy": "feature-frozen; manual allowlist review only; no automatic synchronization",
+  "files": [
+    {
+      "upstream": "apps/web/src/lib/crypto.ts",
+      "target": "src/lib/crypto.ts",
+      "upstreamSha256": "a8b8ee14c485a29b68000cca728b6ac62b248ae3d882baecc4053783672f5e94",
+      "snapshotSha256": "fa5893c90c4cee48cb2c2eced1ead1e40d17fa7f64d385a5a5e55146ab9d9420",
+      "adaptation": "Reviewed extraction/adaptation; do not automatically overwrite. Excludes account, network and Pro code."
+    },
+    {
+      "upstream": "apps/web/src/lib/sodium.ts",
+      "target": "src/lib/sodium.ts",
+      "upstreamSha256": "be717fe05ce81ec18dd12988aad04660da12697f529ed3cf403c1597aa2375e9",
+      "snapshotSha256": "be717fe05ce81ec18dd12988aad04660da12697f529ed3cf403c1597aa2375e9",
+      "adaptation": "Unchanged"
+    },
+    {
+      "upstream": "apps/web/src/lib/utils.ts",
+      "target": "src/lib/utils.ts",
+      "upstreamSha256": "98f1eff52680abbbb17986384032c581d316f9979195d21838d4ce7b110930d3",
+      "snapshotSha256": "c6122f2c5cc1c16d4420d108205e0c6cb0a953904750816ad301392d9b52a7c5",
+      "adaptation": "Reviewed extraction/adaptation; do not automatically overwrite. Excludes account, network and Pro code."
+    },
+    {
+      "upstream": "apps/web/src/lib/password.ts",
+      "target": "src/lib/password.ts",
+      "upstreamSha256": "5ed668d39d0fb6d4c5df0611942ff7352a2b0bea58a14fad33bf33c075e0304e",
+      "snapshotSha256": "5ed668d39d0fb6d4c5df0611942ff7352a2b0bea58a14fad33bf33c075e0304e",
+      "adaptation": "Unchanged"
+    },
+    {
+      "upstream": "apps/web/src/lib/search.ts",
+      "target": "src/lib/search.ts",
+      "upstreamSha256": "2458e82f2a8609800e2b191d6dddc3cb2a289b36f117ad82a77a347ebe27900e",
+      "snapshotSha256": "2458e82f2a8609800e2b191d6dddc3cb2a289b36f117ad82a77a347ebe27900e",
+      "adaptation": "Unchanged"
+    },
+    {
+      "upstream": "apps/web/src/lib/transfer.ts",
+      "target": "src/lib/transfer.ts",
+      "upstreamSha256": "d6eb38cabbc9e09bfbbac4ca030df4937a4393e3139861a3df3ab644584c2b3b",
+      "snapshotSha256": "d6eb38cabbc9e09bfbbac4ca030df4937a4393e3139861a3df3ab644584c2b3b",
+      "adaptation": "Unchanged"
+    },
+    {
+      "upstream": "scripts/test-crypto.ts",
+      "target": "tests/crypto.test.ts",
+      "upstreamSha256": "987192b1130f46d7866315493a50527006e903920199b2e2d29c3f6d2b2cab8f",
+      "snapshotSha256": "fccde03aea0b0bee7cbfccb10370facb281aa6f252b8f72cfb04baa75855c894",
+      "adaptation": "Reviewed extraction/adaptation; do not automatically overwrite. Excludes account, network and Pro code."
+    },
+    {
+      "upstream": "scripts/test-search.ts",
+      "target": "tests/search.test.ts",
+      "upstreamSha256": "c706fbd8487dba498cdf10b166ed7e099108836122b8b6936d1942045084ecd3",
+      "snapshotSha256": "f84f87c5bafc28fccc0ca9fe263ef22ecb327cbfc93e864feed4cc97ee1336c0",
+      "adaptation": "Reviewed extraction/adaptation; do not automatically overwrite. Excludes account, network and Pro code."
+    },
+    {
+      "upstream": "apps/web/src/app/globals.css",
+      "target": "src/upstream.css",
+      "upstreamSha256": "d4b1203312de4c28d5a099fbe34c0ff837f337176d8e43a6f85daa89d1292d84",
+      "snapshotSha256": "f8734741b7f12132cf99d69a7307e197a94ab3d4e9cf1d281e60a2aadfe7fcf2",
+      "adaptation": "Reviewed extraction/adaptation; do not automatically overwrite. Excludes account, network and Pro code."
+    },
+    {
+      "upstream": "apps/web/src/app/icon.png",
+      "target": "public/icon.png",
+      "upstreamSha256": "b9f67c078241ac946722be66526cf7f8f2db42ebe8759121f67279910a45d0a7",
+      "snapshotSha256": "b9f67c078241ac946722be66526cf7f8f2db42ebe8759121f67279910a45d0a7",
+      "adaptation": "Unchanged"
+    },
+    {
+      "upstream": "apps/web/src/components/NoteEditor.tsx",
+      "target": "src/NoteEditor.tsx",
+      "upstreamSha256": "8d57b9a4e3d29660f6b3273abcc3deff18c30f9c65028c7a54ea62151090ebf2",
+      "snapshotSha256": "1595418824e727bc16ebcf5462c66935532113f347afd7b489074d7756929084",
+      "adaptation": "Reviewed extraction/adaptation; do not automatically overwrite. Excludes account, network and Pro code."
+    },
+    {
+      "upstream": "apps/web/src/lib/types.ts",
+      "target": "src/lib/types.ts",
+      "upstreamSha256": "e9c6c816858bd91011a2b0310049106b0727d9b310c5ac5e07e8ec5a7ab31358",
+      "snapshotSha256": "3298dd4a5eaca06ad8a3b7bf8384bd7b283642078e699904d2367dfab60d16f5",
+      "adaptation": "Reviewed extraction/adaptation; do not automatically overwrite. Excludes account, network and Pro code."
+    }
+  ]
+}

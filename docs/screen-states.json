@@ -1,0 +1,194 @@
+{
+  "route": "/",
+  "sourceHashes": {
+    "src/App.tsx": "1161619601201082d81f8e7b9e84499fdf30da67a83aac817ac1ba21c56e6bf0",
+    "src/NoteEditor.tsx": "1595418824e727bc16ebcf5462c66935532113f347afd7b489074d7756929084",
+    "src/main.tsx": "9dfdbacf04d2e3a1de53b087a752adc8e5a605a55a9fd3f2977e5d85843eb29a",
+    "src/lib/vault.ts": "2942d085c8eaacddccb937c8f4dc57d57c6de8baa9c09f3a2573d404d51330ef"
+  },
+  "flows": [
+    {
+      "name": "Create vault",
+      "states": [
+        {
+          "title": "Create",
+          "file": "create.jpg",
+          "private": false
+        },
+        {
+          "title": "Recovery key",
+          "file": "recovery-private.jpg",
+          "private": true
+        },
+        {
+          "title": "Empty workspace",
+          "file": "empty.jpg",
+          "private": false
+        },
+        {
+          "title": "Editor",
+          "file": "editor.jpg",
+          "private": false
+        }
+      ],
+      "connected": true
+    },
+    {
+      "name": "Settings and deletion confirmation",
+      "states": [
+        {
+          "title": "Editor",
+          "file": "docker-editor.jpg",
+          "private": false
+        },
+        {
+          "title": "Settings",
+          "file": "settings.jpg",
+          "private": false
+        },
+        {
+          "title": "Delete confirmation",
+          "file": "delete-confirm.jpg",
+          "private": false
+        }
+      ],
+      "connected": true
+    },
+    {
+      "name": "Recoverable trash",
+      "states": [
+        {
+          "title": "Editor",
+          "file": "editor.jpg",
+          "private": false
+        },
+        {
+          "title": "Trash",
+          "file": "trash.jpg",
+          "private": false
+        },
+        {
+          "title": "Restored editor",
+          "file": "docker-editor.jpg",
+          "private": false
+        }
+      ],
+      "connected": true
+    },
+    {
+      "name": "Unlock and recover",
+      "states": [
+        {
+          "title": "Locked",
+          "file": "locked.jpg",
+          "private": false
+        },
+        {
+          "title": "Recovery unlock",
+          "file": "recovery-unlock.jpg",
+          "private": false
+        },
+        {
+          "title": "Reset password form",
+          "file": "reset-password.jpg",
+          "private": false
+        }
+      ],
+      "connected": true
+    },
+    {
+      "name": "Backup restore",
+      "states": [
+        {
+          "title": "Create",
+          "file": "create.jpg",
+          "private": false
+        },
+        {
+          "title": "Restore empty vault",
+          "file": "restore-empty.jpg",
+          "private": false
+        },
+        {
+          "title": "Restored note",
+          "file": "restored-editor.jpg",
+          "private": false
+        }
+      ],
+      "connected": true
+    },
+    {
+      "name": "Validation and organization",
+      "states": [
+        {
+          "title": "Create error",
+          "file": "create-error.jpg",
+          "private": false
+        },
+        {
+          "title": "Unlock error",
+          "file": "unlock-error.jpg",
+          "private": false
+        },
+        {
+          "title": "Search empty",
+          "file": "search-empty.jpg",
+          "private": false
+        },
+        {
+          "title": "Rename folder",
+          "file": "rename-folder.jpg",
+          "private": false
+        }
+      ],
+      "connected": false
+    },
+    {
+      "name": "375px responsive states",
+      "states": [
+        {
+          "title": "Mobile sidebar",
+          "file": "mobile-sidebar.jpg",
+          "private": false
+        },
+        {
+          "title": "Mobile editor",
+          "file": "mobile-editor.jpg",
+          "private": false
+        },
+        {
+          "title": "Mobile settings",
+          "file": "mobile-settings.jpg",
+          "private": false
+        }
+      ],
+      "connected": true
+    },
+    {
+      "name": "Pending browser captures",
+      "states": [
+        {
+          "title": "Loading and storage failure",
+          "file": null,
+          "private": false
+        },
+        {
+          "title": "Save failure and retry",
+          "file": null,
+          "private": false
+        },
+        {
+          "title": "Editor failure and retry",
+          "file": null,
+          "private": false
+        },
+        {
+          "title": "Restore / clipboard failure",
+          "file": null,
+          "private": false
+        }
+      ],
+      "connected": false
+    }
+  ]
+}
