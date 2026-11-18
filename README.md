@@ -1,9 +1,17 @@
 # Scrinium Note
 
-[中文说明](README.zh-CN.md) · [Full Scrinium](https://scrinium-note.com/)
+[![Scrinium Note — Encrypted Markdown notes. Hosted version at scrinium-note.com.](docs/assets/scrinium-note-banner.png)](https://scrinium-note.com/)
+
+[中文说明](README.zh-CN.md) · [Hosted version](https://scrinium-note.com/)
 
 Local encrypted Markdown notes in your browser. A feature-frozen, source-available
 snapshot for noncommercial use, extracted from Scrinium.
+
+## Hosted version
+
+For encrypted sync across devices, image attachments and version history,
+visit [Scrinium Note](https://scrinium-note.com/). Use the hosted app directly
+in your browser, without setting up a local server.
 
 ## Get the source
 
@@ -78,7 +86,7 @@ images; it is a boundary, not a security-audit claim.
 - Basic Milkdown Markdown editing, lists, tables, code highlighting, clipboard and undo/redo.
 - Encrypted vault creation/unlock, recovery keys, password changes and key regeneration.
 - Encrypted browser persistence, local search, notes, folders, outline and recoverable trash.
-- Markdown/text/plain-JSON import, explicit plaintext-JSON export, encrypted encrypted backup and recovery.
+- Markdown/text/plain-JSON import, explicit plaintext-JSON export, encrypted backup and recovery.
 - Dark/light themes and left/center/wide reading layouts.
 - Password-plus-typed-confirmation deletion of this local vault only.
 
@@ -87,11 +95,9 @@ the password/recovery key and every encrypted note. They never silently replace
 an existing vault. Other Scrinium editions' encrypted backups are not accepted;
 export plain notes there and import those instead. Plain exports are unencrypted.
 
-The build excludes accounts, authentication servers, cloud sync,
-subscriptions, payment, encrypted attachments, stored version history, graph
-view, formula/diagram plugins, burner-note sharing, legacy/dead-man features and
-the production app's Pro templates. It is not a drop-in replacement for every
-hosted feature. Third-party editor libraries remain separately licensed.
+This repository provides the local browser app. Online accounts, encrypted sync
+and hosted services are provided separately at [Scrinium Note](https://scrinium-note.com/).
+Third-party editor libraries remain separately licensed.
 
 ## License and maintenance
 
@@ -111,7 +117,7 @@ security or compatibility fixes separately before choosing to release a new tag.
 npm run upstream:check -- /absolute/path/to/private/scrinium
 ```
 
-The command only reports upstream hashes; it never copies files or imports Pro
+The command only reports upstream hashes; it never copies private application
 code. See [maintenance](docs/MAINTENANCE.md), [security boundaries](SECURITY.md)
 and [validation](docs/VALIDATION.md). Do not use repository metadata or passing
 unit tests as proof of an independent security audit.

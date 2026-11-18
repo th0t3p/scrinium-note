@@ -1,9 +1,16 @@
 # Scrinium Note
 
-[English](README.md) · [Scrinium 官网](https://scrinium-note.com/)
+[![Scrinium Note：加密 Markdown 笔记。在线托管版见 scrinium-note.com。](docs/assets/scrinium-note-banner.png)](https://scrinium-note.com/)
+
+[English](README.md) · [在线托管版](https://scrinium-note.com/)
 
 在浏览器里使用的本地加密 Markdown 笔记。这是一份功能固定的源码快照，
 代码采用非商用许可。
+
+## 在线托管版
+
+需要跨设备加密同步、图片附件或版本历史，可以使用
+[Scrinium Note 在线托管版](https://scrinium-note.com/)，直接在浏览器里使用，无需搭建本地服务。
 
 ## 下载源码
 
@@ -70,8 +77,8 @@ docker compose up --build -d
 不会直接覆盖现有笔记库。其他 Scrinium 版本的加密备份不兼容；迁移时先在原版
 导出明文笔记，再导入 Scrinium Note。明文导出文件不加密。
 
-此版本移除了账号、登录服务器、云同步、订阅支付，以及加密附件、历史版本、
-关系图谱、公式与图解、阅后即焚、失联托管和原版 Pro 模板等功能。
+本仓库提供本地运行的版本。在线账号、加密同步和托管服务由
+[Scrinium Note 在线托管版](https://scrinium-note.com/) 提供。
 
 ## 许可和后续更新
 
@@ -85,5 +92,5 @@ docker compose up --build -d
 
 [UPSTREAM.json](UPSTREAM.json) 保存来源提交和文件校验。
 执行 `npm run upstream:check -- /absolute/path/to/private/scrinium` 只会报告变化，
-不会复制文件或自动带入 Pro 代码。更多说明见 [维护方式](docs/MAINTENANCE.md)
+不会复制文件或自动带入未公开代码。更多说明见 [维护方式](docs/MAINTENANCE.md)
 和 [验证记录](docs/VALIDATION.md)。源码可读和测试通过不等于经过独立安全审计。
