@@ -27,11 +27,15 @@ not a supported deployment.
 
 ## Run locally
 
+This repository contains source code, not a desktop installer. Downloading the
+ZIP alone does not start the app. Choose either the Node commands below or the
+Docker command in the next section. The local preview running on the author's
+machine has already completed these setup steps.
+
 Use Node 20.19+ or 22.12+. From the repository directory:
 
 ```sh
 npm ci --ignore-scripts
-npm test
 npm run build
 npm start
 ```
@@ -39,14 +43,23 @@ npm start
 Open `http://127.0.0.1:5194/`. No runtime environment variables, API keys, accounts
 or backend database are required. `npm run dev` rebuilds and starts the same
 static preview; it does not have a development HMR server. Rebuild after edits.
+After the initial setup, run `npm start` from this directory to use the existing
+build again. Keep the local server running while using the app. Developers can
+run the automated checks separately with `npm test`.
 
 ## Docker
+
+Install Docker with Docker Compose support, then run this from the extracted
+repository directory:
 
 ```sh
 docker compose up --build -d
 ```
 
 Open `http://localhost:8088/`. The default port is bound only to this machine.
+This command installs dependencies and builds the app inside Docker; Node does
+not need to be installed on the host. After the first build, use
+`docker compose up -d` to start it again, or `docker compose stop` to stop it.
 The image uses a non-root static Nginx server and does not contain an application
 API or note database. For remote hosting, provide HTTPS and preserve one stable
 origin. The shipped production CSP blocks browser API connections and remote

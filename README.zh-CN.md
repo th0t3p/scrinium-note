@@ -19,19 +19,32 @@ Docker 数据卷也不能备份这些浏览器数据。
 
 ## 本机启动
 
+仓库提供的是源码，没有桌面安装包。下载 ZIP 后还要启动网页服务，不能直接双击
+运行。下面的 Node 方式和 Docker 方式任选一种；本机现有预览已经完成了这些步骤。
+
 安装 Node 20.19 及以上版本，或 Node 22.12 及以上版本。在项目目录执行：
 
 ```sh
 npm ci --ignore-scripts
-npm test
 npm run build
 npm start
 ```
 
 打开 `http://127.0.0.1:5194/`。不需要配置环境变量、API 密钥、账号或后端数据库。
 修改代码后重新构建即可；本地预览没有热更新服务。
+首次安装和构建后，下次在同一目录执行 `npm start` 即可。使用时保持网页服务运行。
+开发者可以另行执行 `npm test` 运行自动化检查。
 
-也可以执行 `docker compose up --build -d`，然后打开 `http://localhost:8088/`。
+## Docker 启动
+
+安装支持 Docker Compose 的 Docker 后，在解压出的项目目录执行：
+
+```sh
+docker compose up --build -d
+```
+
+然后打开 `http://localhost:8088/`。依赖安装和构建都在容器里完成，本机无需另装 Node。
+首次构建后，下次执行 `docker compose up -d` 启动，执行 `docker compose stop` 停止。
 容器里只有静态网页服务，默认只允许本机访问。放到远程服务器时需要配置 HTTPS；
 生产版本会阻止网页中的 API 连接和远程图片加载。不能直接双击 index.html 使用。
 
